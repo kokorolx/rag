@@ -25,7 +25,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <nav className="sticky top-0 z-50 bg-gray-900 p-4 border-b border-gray-800">
+          <div className="max-w-3xl mx-auto flex gap-6">
+            <a href="https://thnkandgrow.com" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </a>
+            <a href="https://blog.thnkandgrow.com" className="text-gray-300 hover:text-white transition-colors">
+              Blog
+            </a>
+            <a href="https://thnkandgrow.com/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </a>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }

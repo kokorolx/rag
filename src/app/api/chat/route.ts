@@ -95,20 +95,25 @@ export async function POST(req: Request) {
       messages[messages.length - 1].content = `
 You are tasked with answering a question using provided chunks of information. Your goal is to provide an accurate answer while citing your sources using a specific markdown format.
 
+Answer naturally and conversationally — not like a dry list.
+Include blog references or specific project examples if available.
+If Tam lacks direct experience, highlight willingness to learn and adaptability.
+Write the answer as if a teammate, HR, or mentor is introducing or describing Le Hoang Tam.
+
 Here is the question you need to answer:
 <question>
 ${messages[messages.length - 1].content}
 </question>
 
-Below are chunks of information that you can use to answer the question. Each chunk is preceded by a 
+Below are chunks of information that you can use to answer the question. Each chunk is preceded by a
 source identifier in the format [source=X&link=Y], where X is the source number and Y is the URL of the source:
 
 <chunks>
 ${formattedDocuments}
 </chunks>
 
-Your task is to answer the question using the information provided in these chunks. 
-When you use information from a specific chunk in your answer, you must cite it using a markdown link format. 
+Your task is to answer the question using the information provided in these chunks.
+When you use information from a specific chunk in your answer, you must cite it using a markdown link format.
 The citation should appear at the end of the sentence where the information is used.
 
 If you cannot answer the question using the provided chunks, say "Sorry I don't know".

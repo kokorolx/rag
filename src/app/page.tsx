@@ -12,9 +12,11 @@ interface PlaceholderOption {
 }
 
 const placeholderOptions: PlaceholderOption[] = [
-  { emoji: "⚡️", text: "Placeholder question 1?" },
-  { emoji: "🤖", text: "Placeholder question 2?" },
-  { emoji: "🌟", text: "Placeholder question 3?" },
+  { emoji: "⚡️", text: "Thông tin liên hệ" },
+  { emoji: "🤖", text: "Các dự án đã làm?" },
+  { emoji: "🌟", text: "Có thể làm việc với ngôn ngữ/framework mới không?" },
+  { emoji: "🌟", text: "Các vấn đề khó đã giải quyết trong các dự án là gì?" },
+  { emoji: "🌟", text: "Thông tin chi tiết về Lê Hoàng Tâm" },
 ];
 
 const formatJSON = (obj: Record<string, unknown>) => {
@@ -80,7 +82,7 @@ export default function Page() {
     },
     experimental_throttle: 250
   });
-  
+
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
   const [selectedOption, setSelectedOption] = useState<PlaceholderOption | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -187,7 +189,7 @@ export default function Page() {
               className={`flex gap-4 ${message.role === "user" ? "bg-gray-800" : "bg-gray-900"} p-6 rounded-lg`}
             >
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center 
+                className={`w-8 h-8 rounded-full flex items-center justify-center
                 ${message.role === "user" ? "bg-gray-600" : "bg-blue-600"}`}
               >
                 {message.role === "user" ? "👤" : "🤖"}
@@ -195,10 +197,10 @@ export default function Page() {
               <div className="flex-1 min-w-0">
                 <div className="prose prose-invert max-w-none">
                   <div
-                    className="[&>table]:w-full [&>table]:border-collapse [&>table]:my-4 
-                             [&>table>thead>tr]:border-b [&>table>thead>tr]:border-gray-700 
-                             [&>table>tbody>tr]:border-b [&>table>tbody>tr]:border-gray-800 
-                             [&>table>*>tr>*]:p-2 [&>table>*>tr>*]:text-left 
+                    className="[&>table]:w-full [&>table]:border-collapse [&>table]:my-4
+                             [&>table>thead>tr]:border-b [&>table>thead>tr]:border-gray-700
+                             [&>table>tbody>tr]:border-b [&>table>tbody>tr]:border-gray-800
+                             [&>table>*>tr>*]:p-2 [&>table>*>tr>*]:text-left
                              [&>table>thead>tr>*]:font-semibold [&>table>tbody>tr>*]:align-top"
                   >
                     <Markdown
@@ -239,7 +241,7 @@ export default function Page() {
               </div>
             </div>
           ))}
-          
+
           {errorMessage && (
             <div className="bg-red-900/50 border border-red-700 rounded-lg p-4 flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
@@ -247,7 +249,7 @@ export default function Page() {
                 <h3 className="font-medium text-red-400">Error</h3>
                 <p className="text-red-200 mt-1">{errorMessage}</p>
               </div>
-              <button 
+              <button
                 onClick={() => setErrorMessage(null)}
                 className="text-red-400 hover:text-red-300"
               >
@@ -255,14 +257,14 @@ export default function Page() {
               </button>
             </div>
           )}
-          
+
           {isLoading && !errorMessage && (
             <div className="flex justify-center items-center py-4">
               <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500"></div>
               <span className="ml-3 text-gray-400">Processing your request...</span>
             </div>
           )}
-          
+
           <div ref={messagesEndRef} />
         </div>
       </div>
@@ -330,13 +332,12 @@ export default function Page() {
 
           <div className="flex justify-center">
             <a
-              href="https://vectorize.io"
+              href="https://thnkandgrow.com"
               target="_blank"
               rel="noopener noreferrer"
               className="block transition-opacity hover:opacity-80"
             >
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 text-sm">Powered by</span>
                 <img src="/vio-light-logo.svg" alt="Vectorize Logo" className="h-5" />
               </div>
             </a>
