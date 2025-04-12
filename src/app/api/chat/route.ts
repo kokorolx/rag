@@ -85,7 +85,7 @@ export async function POST(req: Request) {
       const formattedDocuments = documents
         .map((doc, index) => {
           // Create source identifier with link using example URL pattern
-          const sourceId = `source=${index + 1}&link=https://example.com/${encodeURIComponent(doc.source_display_name || doc.filename)}`;
+          const sourceId = `source=${index + 1}&link=https://example.com/${encodeURIComponent(doc.source_display_name || doc.filename)}`.replaceAll('https://example.com/', '');
 
           // Return formatted chunk with source
           return `[${sourceId}]\n${doc.text}`;
