@@ -14,6 +14,7 @@ interface PlaceholderOption {
 const placeholderOptions: PlaceholderOption[] = [
   { emoji: "⚡️", text: "Thông tin liên hệ" },
   { emoji: "🤖", text: "Các dự án đã làm?" },
+  { emoji: "🤖", text: "Tâm có làm việc với AI chưa?" },
   { emoji: "🌟", text: "Có thể làm việc với ngôn ngữ/framework mới không?" },
   { emoji: "🌟", text: "Các vấn đề khó đã giải quyết trong các dự án là gì?" },
   { emoji: "🌟", text: "Thông tin chi tiết về Lê Hoàng Tâm" },
