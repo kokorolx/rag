@@ -340,7 +340,7 @@ export default function Page() {
               className="block transition-opacity hover:opacity-80"
             >
               <div className="flex items-center gap-2">
-                <img src="/vio-light-logo.svg" alt="Vectorize Logo" className="h-5" />
+                thnkandgrow.com @ {new Date().getFullYear()}
               </div>
             </a>
           </div>
