@@ -122,7 +122,7 @@ The citation format should be as follows:
 [Chunk source](URL)
 
 For example, if you're using information from the chunk labeled [source=3&link=https://example.com/page], your citation would look like this:
-[3](https://example.com/page) and would open a new tab to the source URL when clicked.
+[post title](https://example.com/page) and would open a new tab to the source URL when clicked.
 `;
     }
 
