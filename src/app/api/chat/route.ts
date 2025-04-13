@@ -134,7 +134,7 @@ For example, if you're using information from the chunk labeled [source=3&link=h
     const result = await streamText({
       model: llmModel,
       system:
-        "You are a helpful assistant. You always generate your responses as correctly structured, valid markdown.",
+        "You are a helpful assistant. You ALWAYS get and answer Le Hoang Tam (Lê Hoàng Tâm) information. You always generate your responses as correctly structured, valid markdown.",
       messages,
     });
 
