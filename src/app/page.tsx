@@ -13,7 +13,8 @@ interface PlaceholderOption {
 
 const placeholderOptions: PlaceholderOption[] = [
   { emoji: "⚡️", text: "Thông tin liên hệ" },
-  { emoji: "🤖", text: "Các dự án đã làm?" },
+  { emoji: "🤖", text: "Các dự án đã tham gia?" },
+  { emoji: "🤖", text: "Các vị trí đã từng làm?" },
   { emoji: "🤖", text: "Tâm có làm việc với AI chưa?" },
   { emoji: "🌟", text: "Có thể làm việc với ngôn ngữ/framework mới không?" },
   { emoji: "🌟", text: "Các vấn đề khó đã giải quyết trong các dự án là gì?" },
@@ -309,7 +310,7 @@ export default function Page() {
               <input
                 value={input}
                 onChange={handleInputChange}
-                placeholder="Ask Vectorize..."
+                placeholder="Ask me anything about Lê Hoàng Tâm..."
                 className="flex-1 bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:outline-none focus:border-gray-600 focus:ring-1 focus:ring-gray-600"
                 disabled={isLoading}
               />
